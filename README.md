@@ -22,7 +22,7 @@ Here's an example for adding the middleware to a Rails app in `config/initialize
 
 ```ruby
 Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :convey, ENV["TWITCH_CLIENT_ID"], ENV["TWITCH_CLIENT_SECRET"]
+  provider :convey, ENV["CONVEY_CLIENT_ID"], ENV["CONVEY_CLIENT_SECRET"]
 end
 ```
 
