@@ -20,12 +20,12 @@ module OmniAuth
 
       option :authorize_options, [:scope]
 
-      uid{ raw_info["user"]["_id"] }
+      uid{ raw_info["user"]["id"] }
 
       info do
         {
           email: raw_info["user"]["email"],
-          urls: { profile: "http://localhost:3000/api/v1/user/#{raw_info["user"]["_id"]}" }
+          urls: { profile: "http://localhost:3000/api/v1/user/#{raw_info["user"]["id"]}" }
         }
       end
 
