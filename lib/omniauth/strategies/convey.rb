@@ -25,7 +25,9 @@ module OmniAuth
       info do
         {
           email: raw_info["user"]["email"],
-          urls: { profile: "http://localhost:3000/api/v1/user/#{raw_info["user"]["id"]}" }
+          urls: { profile: "http://localhost:3000/api/v1/user/#{raw_info["user"]["id"]}" },
+          first_name: raw_info["user"]["first_name"],
+          last_name: raw_info["user"]["last_name"]
         }
       end
 
